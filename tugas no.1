@@ -1,0 +1,23 @@
+program latihan;
+uses crt;
+var 
+nama_karyawan :string;
+gaji_pokok,gaji_lembur,potongan_gaji,gaji_total:real;
+banyak_hari_lembur,banyak_hari_tidak_bekerja:integer;
+begin
+clrscr;
+        write('masukkan nama karyawan: ');
+        readln(nama_karyawan);
+        write('masukkan gaji pokok: ');
+        readln(gaji_pokok);
+        write('masukkan jumlah banyak hari lembur: ');
+        readln(banyak_hari_lembur);
+        write('masukkan jumlah banyak hari tidak bekerja: ');
+        readln(banyak_hari_tidak_bekerja);
+
+        gaji_lembur:=150.000*banyak_hari_lembur;
+        potongan_gaji:=-30.000*banyak_hari_tidak_bekerja;
+        gaji_total:=gaji_pokok+gaji_lembur-potongan_gaji;
+
+        write('jumlah gaji total adalah ',gaji_total:5:1);
+end.
